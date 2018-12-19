@@ -38,9 +38,9 @@ public class MultithreadingInJava {
 
         long startTime = System.currentTimeMillis();
         
-        myCounter1.run();
+        myCounter1.start(); //Don't run() called explicitly, run should be called by JVM explicitly
         System.out.println("------------------------------------");
-        myCounter2.run();
+        myCounter2.start(); //Don't run() called explicitly, run should be called by JVM explicitly
         
         long endTime = System.currentTimeMillis();
         System.out.println("Total time required to process = " + (endTime - startTime));
