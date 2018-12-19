@@ -11,6 +11,11 @@ class MyCounter extends Thread {
         this.threadNo = threadNo;
     }
 
+    @Override
+    public void run() {
+        countMe();
+    }
+
     public void countMe() {
         for (int i = 1; i <= 9; i++) {
 
@@ -33,9 +38,9 @@ public class MultithreadingInJava {
 
         long startTime = System.currentTimeMillis();
         
-        myCounter1.countMe();
+        myCounter1.run();
         System.out.println("------------------------------------");
-        myCounter2.countMe();
+        myCounter2.run();
         
         long endTime = System.currentTimeMillis();
         System.out.println("Total time required to process = " + (endTime - startTime));
