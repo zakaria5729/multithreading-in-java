@@ -47,6 +47,5 @@ public class CreatingThreadUsingThreadClass {
         
         long endTime = System.currentTimeMillis();
         System.out.println("Total time required to process = " + (endTime - startTime));
-
     }
 }
