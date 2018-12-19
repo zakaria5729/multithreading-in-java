@@ -2,8 +2,17 @@ package synchronizedblock;
 
 class Bracket {
 
+    private final Object myLock = "myLock";
+    
     public void generate() {
-        synchronized (this) {
+        /*
+        *The synchronized block is appling an entrancing or monitor lock
+        *And this lock need not to be exposed to the outside world
+        *So the recommended to make use of a private object in order to apply the lock
+        *And this private lock not effected any impact to performance
+        */
+        
+        synchronized (myLock) { ////only synchronized this part
             for (int i = 0; i < 10; i++) {
                 try {
                     Thread.sleep(10);
