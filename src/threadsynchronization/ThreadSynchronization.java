@@ -30,7 +30,7 @@ public class ThreadSynchronization {
         System.out.println("\nThe value of counter = " + ThreadSynchronization.counter);
     }
 
-    public void countMe() {
+    synchronized public void countMe() {
         for (int i = 0; i < 1000; i++) {
             ThreadSynchronization.counter++;
         }
