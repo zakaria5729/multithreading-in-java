@@ -30,7 +30,7 @@ class MyCounter extends Thread {
     }
 }
 
-public class MultithreadingInJava {
+public class CreatingThreadUsingThreadClass {
 
     public static void main(String[] args) throws InterruptedException {
         MyCounter myCounter1 = new MyCounter(1);
@@ -43,6 +43,7 @@ public class MultithreadingInJava {
         myCounter2.start(); //Don't run() called explicitly, run should be called by JVM explicitly
         
         Thread.sleep(4505);
+        //Thread.sleep(4500);
         
         long endTime = System.currentTimeMillis();
         System.out.println("Total time required to process = " + (endTime - startTime));
